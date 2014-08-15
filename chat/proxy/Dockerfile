@@ -1,12 +1,15 @@
-FROM phusion/baseimage 
+FROM centos 
 MAINTAINER Thiago Veronezi
 
-RUN apt-get update
-RUN apt-get install -y supervisor nginx
+ADD nginx.repo /etc/yum.repos.d/
+
+RUN yum install -y python-setuptools nginx
+RUN easy_install pip
+RUN pip install supervisor
 
 ADD supervisord.conf /etc/
-ADD jchat /etc/nginx/sites-enabled/
-ADD springchat /etc/nginx/sites-enabled/
+ADD jchat.conf /etc/nginx/conf.d/
+ADD springchat.conf /etc/nginx/conf.d/
 
 CMD ["/usr/bin/supervisord"]
 
