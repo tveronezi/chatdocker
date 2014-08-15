@@ -16,6 +16,5 @@ RUN rm -Rf /opt/tomee/webapps/docs
 RUN rm -Rf /opt/tomee/webapps/host-manager
 RUN rm -Rf /opt/tomee/webapps/manager
 
-EXPOSE 8080
 CMD ["/usr/bin/supervisord"]
 

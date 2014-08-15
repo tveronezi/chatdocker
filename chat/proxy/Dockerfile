@@ -1,10 +1,10 @@
-FROM tomee_srv 
+FROM phusion/baseimage 
 MAINTAINER Thiago Veronezi
 
-ADD nginx.repo /etc/yum.repos.d/
-RUN yum install -y nginx
+RUN apt-get update
+RUN apt-get install -y supervisor nginx
+
 ADD supervisord.conf /etc/
-ADD proxy.conf /etc/nginx/
 ADD jchat /etc/nginx/sites-enabled/
 ADD springchat /etc/nginx/sites-enabled/
 
