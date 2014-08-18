@@ -28,7 +28,7 @@
   <Resource id="MyJmsResourceAdapter" type="ActiveMQResourceAdapter">
     # Do not start the embedded ActiveMQ broker
     BrokerXmlConfig =
-    ServerUrl = tcp://jchat:61618
+    ServerUrl = tcp://mybroker:61618
   </Resource>
 
   <Resource id="MyJmsConnectionFactory" type="javax.jms.ConnectionFactory">
