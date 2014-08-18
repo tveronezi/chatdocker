@@ -8,6 +8,8 @@ RUN easy_install pip
 RUN pip install supervisor
 
 ADD supervisord.conf /etc/
+
+RUN rm /etc/nginx/conf.d/*
 ADD jchat.conf /etc/nginx/conf.d/
 ADD springchat.conf /etc/nginx/conf.d/
 
