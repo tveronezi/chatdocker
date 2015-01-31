@@ -1,8 +1,8 @@
 FROM chat_apps 
 MAINTAINER Thiago Veronezi
 
-RUN cp /opt/source/jchat/target/jchat-1.0-SNAPSHOT.war /opt/tomee/webapps
-RUN cd /opt/tomee/webapps && mv jchat-1.0-SNAPSHOT.war ROOT.war
+RUN cp /opt/source/jchat.war /opt/tomee/webapps
+RUN cd /opt/tomee/webapps && mv jchat.war ROOT.war
 
 RUN cp /opt/source/jchat/src/main/tomee/standalone/conf/loginScript.js /opt/tomee/conf/
 RUN cp /opt/source/jchat/src/main/tomee/standalone/conf/system.properties /opt/tomee/conf/

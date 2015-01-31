@@ -1,7 +1,7 @@
 FROM centos
 MAINTAINER Thiago Veronezi
 
-RUN yum install -y subversion git tar
+RUN yum install -y subversion wget tar
 RUN yum install -y java-1.7.0-openjdk-devel.x86_64 
 
 ADD http://apache.parentingamerica.com/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz /opt/apache-maven-3.0.5-bin.tar.gz
